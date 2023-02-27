@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { combineAll } from 'rxjs/operators';
+import { observable, Observable } from 'rxjs';
+import { combineAll, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-custom-obs',
@@ -53,14 +53,15 @@ export class CustomObsComponent implements OnInit {
       }
       count++}, 2000)
      })
-    )
+    );
 
     custObs2.subscribe((value) =>{
       console.log(value)
     },
     (error) => {
       console.log(error)
-    })
+
+    });
   }
 
   //custom interval obs

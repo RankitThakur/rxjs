@@ -1,0 +1,50 @@
+<h3>Retry RetryWhen scan and delay opraters</h3>
+<div class="col-md-6">
+    <div *ngFor="let item of result">   
+        <table class="table">
+            <tr>
+                <th>name</th>
+                <td>{{item.name}}</td>
+            </tr>
+            <tr>
+                <th>phone</th>
+                <td>{{item.phone}}</td>
+            </tr>
+            <tr>
+                <th>website</th>
+                <td>{{item.website}}</td>
+            </tr>
+        </table>
+    </div>
+    <button class="btn btn-primary" type="button" (click)="fetchData()">
+        <span *ngIf="fetchData" class="spinner-grow spinner-grow-sm" role="status"></span>
+        {{ fetchData ? 'fetchData....' : 'fetchData' }}
+      </button>
+     <p>data:<strong>{{status}}</strong></p> 
+      
+</div>
+
+<div class="col-md-6">
+    <div *ngIf="showData">   
+        <table class="table">
+            <tr>
+                <th>title</th>
+                <td>{{data.title}}</td>
+            </tr>
+            <tr>
+                <th>userId</th>
+                <td>{{data.userId}}</td>
+            </tr>
+            <tr>
+                <th>ID</th>
+                <td>{{data.id}}</td>
+            </tr>
+        </table>
+    </div>
+    <button class="btn btn-primary" type="button" (click)="getData()">
+        <span *ngIf="fetchData" class="spinner-grow spinner-grow-sm" role="status"></span>
+        fetchData2
+      </button>
+     <p>data:<strong>{{status2}}</strong></p> 
+      
+</div>

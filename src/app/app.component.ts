@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import {filter, map, tap} from 'rxjs/operators';
+import { CommonServicesService } from './common-services.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,13 @@ import {filter, map, tap} from 'rxjs/operators';
 })
 export class AppComponent {
   
+ subscribe: boolean = false;
+ constructor(private commonService: CommonServicesService) { }
   ngOnInit(){
+
+    this.commonService.subscribe.subscribe(res=>{
+      this.subscribe = res;
+    })
     //observable=>>> emits  the data
     // const demoTest = new Observable((subscriber)=>{
     //   subscriber.next({name: 'test', price:54});
