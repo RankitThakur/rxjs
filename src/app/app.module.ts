@@ -17,6 +17,9 @@ import { SubjectComponent } from './subject/subject.component';
 import { Comp1Component } from './comman-component/comp1/comp1.component';
 import { Comp2Component } from './comman-component/comp2/comp2.component';
 import { Comp3Component } from './comman-component/comp3/comp3.component';
+import { DebounceTimeDistinctUntilChangedComponent } from './debounce-time-distinct-until-changed/debounce-time-distinct-until-changed.component';
+import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
+import { AsyncSubjectComponent } from './async-subject/async-subject.component';
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import { Comp3Component } from './comman-component/comp3/comp3.component';
     SubjectComponent,
     Comp1Component,
     Comp2Component,
-    Comp3Component
+    Comp3Component,
+    DebounceTimeDistinctUntilChangedComponent,
+    ReplaySubjectComponent,
+    AsyncSubjectComponent
   ],
   imports: [
     BrowserModule,

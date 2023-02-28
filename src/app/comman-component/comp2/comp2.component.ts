@@ -8,6 +8,7 @@ import { CommonServicesService } from 'src/app/common-services.service';
 })
 export class Comp2Component implements OnInit {
 
+  respones = "https://jsonplaceholder.typicode.com/posts";     
   constructor(private commonService: CommonServicesService) { }
 
   ngOnInit() {
@@ -16,6 +17,7 @@ export class Comp2Component implements OnInit {
   onChange = (e:any) => {
     console.log(e.value)
     this.commonService.username.next(e.value)
+    this.commonService.fetchData.next(fetch(this.respones).then(respones => respones.json()));
   }
 
 

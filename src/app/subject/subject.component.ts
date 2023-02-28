@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SubjectSubscriber } from 'rxjs/internal/Subject';
+import { map, switchMap, take, toArray } from 'rxjs/operators';
 import { CommonServicesService } from '../common-services.service';
 
 @Component({
@@ -10,12 +11,22 @@ import { CommonServicesService } from '../common-services.service';
 })
 export class SubjectComponent implements OnInit, OnDestroy {
   data:any;
-  name:string = 'Rxjs'
+  name:string;
+  result: any ;
+
   constructor(private commanService: CommonServicesService) {
     this.commanService.username.subscribe((res)=>{
       this.name = res;
     });
-   }
+    this.commanService.fetchData.pipe(
+      switchMap((res)=>{
+        return res
+      }),
+      map((res) => res),
+    ).subscribe((res)=>{
+      this.result = res;
+    });
+  }
 
   ngOnInit() {
     this.subjectData();
@@ -37,6 +48,7 @@ export class SubjectComponent implements OnInit, OnDestroy {
     subject.next(1)
   }
 
+  //Behaviorsubject we can set inital value of it but in subject we can not intial value. 
   ngOnDestroy(): void {
     this.commanService.subscribe.next(false)
   }

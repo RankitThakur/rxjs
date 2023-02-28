@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, interval, Subscription } from 'rxjs';
+import { from, interval, of, Subscription } from 'rxjs';
 import { take, toArray } from 'rxjs/operators';
 
 @Component({

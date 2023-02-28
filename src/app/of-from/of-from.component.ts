@@ -20,7 +20,7 @@ export class OfFromComponent implements OnInit {
     //of ->>>Converts the arguments to an observable sequence.
 
     //example  1- nEmitting a sequence of numbers
-    let  obs1 = of(1,2,3)
+    let  obs1 = of(1,2,3,4,5,6,7,8)
     obs1.subscribe(
       (value)=> {
        this.showData.push(value)    
@@ -59,7 +59,10 @@ export class OfFromComponent implements OnInit {
     })
 
  //from----> it is convert to stream
-    //convert string to observral
+//     convert string to observral
+//     This operator can be used to convert a promise to an observable!
+// 💡 For arrays and iterables, all contained values will be emitted as a sequence!
+// 💡 This operator can also be used to emit a string as a sequence of characters!
     let str1 = "welcome to rxjs topic"
 
     let obs6 = from(str1).subscribe((value)=>{

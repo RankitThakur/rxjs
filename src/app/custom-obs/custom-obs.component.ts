@@ -12,6 +12,8 @@ export class CustomObsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    //Create method takes function as a argument with Observer.
     let custObs = new Observable((obs) => {
       setTimeout(() => {
         obs.next('test1')

@@ -61,7 +61,7 @@ export class TakeComponent implements OnInit {
     });
 
 
-    //take until
+    //take until- muje jitni der tak data chiye ye bhi ek observal leta hai 
     let condition =  timer(2000)
     let custObs4 = from(fetch(respones).then(respones => respones.json())).pipe(
       switchMap(respones => respones),
@@ -78,4 +78,5 @@ export class TakeComponent implements OnInit {
   }
 
 }
+
 

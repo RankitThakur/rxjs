@@ -22,6 +22,7 @@ export class TapComponent implements OnInit {
     obsSubs = data.pipe(
       ///tap- transprantly perfrom any action or side effects like console log , respones data in console,
       // change value property, emit any value of observer  and perfrom any other action 
+      //hamare respones me koi effect nhi padna chiye uske liye iska use karte hai 
       tap((res: any)=>{
         this.myColor = array[res]
         if(res == 3){

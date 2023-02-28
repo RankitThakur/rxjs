@@ -7,8 +7,13 @@ import { CommonServicesService } from 'src/app/common-services.service';
   styleUrls: ['./comp1.component.css']
 })
 export class Comp1Component implements OnInit {
+  userNameData:string;
+  constructor(private commonService: CommonServicesService) {
+    this.commonService.username.subscribe((res)=>{
+      this.userNameData = res;
+    });
 
-  constructor(private commonService: CommonServicesService) { }
+   }
 
   ngOnInit() {
   }
@@ -17,5 +22,4 @@ export class Comp1Component implements OnInit {
     console.log(e.value)
     this.commonService.username.next(e.value)
   }
-
 }

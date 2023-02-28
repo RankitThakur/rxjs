@@ -41,7 +41,6 @@ export class FromEventComponent  {
   ngOnDestroy(){
  this.obs.unsubscribe();
  this.commanService.subscribe.next(false);
-
   }
 }
 

@@ -3,9 +3,26 @@
 <div class="col-md-4">
     <app-comp1></app-comp1>
 </div>
-<div class="col-md-4">
+<div class="col-md-8">
     <app-comp2></app-comp2>
+    <div class="col-md-6">
+        <div *ngFor="let item of result">   
+            <table class="table">
+                <tr>
+                    <th>userId: </th>
+                    <td>{{item.userId}}</td>
+                </tr>
+                <tr>
+                    <th>title: </th>
+                    <td>{{item.title}}</td>
+                </tr>
+                <tr>
+                    <th>body: </th>
+                    <td>{{item.body}}</td>
+                </tr>
+            </table>
+        </div>
 </div>
-<div class="col-md-4">
+<!-- <div class="col-md-4">
     <app-comp3></app-comp3>
-</div>
+</div> -->
