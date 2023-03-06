@@ -20,6 +20,13 @@ import { Comp3Component } from './comman-component/comp3/comp3.component';
 import { DebounceTimeDistinctUntilChangedComponent } from './debounce-time-distinct-until-changed/debounce-time-distinct-until-changed.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { GenerateOperatorComponent } from './generate-operator/generate-operator.component';
+import { AjaxOperatorComponent } from './ajax-operator/ajax-operator.component';
+import { IifOperatorComponent } from './iif-operator/iif-operator.component';
+import { ConcatOperatorComponent } from './concat-operator/concat-operator.component';
+import { MergeOperatorComponent } from './merge-operator/merge-operator.component';
+import { CombineLatestOperatorComponent } from './combine-latest-operator/combine-latest-operator.component';
+import { ConcatMapOperatorComponent } from './concat-map-operator/concat-map-operator.component';
 
 
 @NgModule({
@@ -40,7 +47,14 @@ import { AsyncSubjectComponent } from './async-subject/async-subject.component';
     Comp3Component,
     DebounceTimeDistinctUntilChangedComponent,
     ReplaySubjectComponent,
-    AsyncSubjectComponent
+    AsyncSubjectComponent,
+    GenerateOperatorComponent,
+    AjaxOperatorComponent,
+    IifOperatorComponent,
+    ConcatOperatorComponent,
+    MergeOperatorComponent,
+    CombineLatestOperatorComponent,
+    ConcatMapOperatorComponent
   ],
   imports: [
     BrowserModule,

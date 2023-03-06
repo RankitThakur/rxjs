@@ -13,6 +13,12 @@ import { SubjectComponent } from './subject/subject.component';
 import { DebounceTimeDistinctUntilChangedComponent } from './debounce-time-distinct-until-changed/debounce-time-distinct-until-changed.component';
 import { ReplaySubjectComponent } from './replay-subject/replay-subject.component';
 import { AsyncSubjectComponent } from './async-subject/async-subject.component';
+import { GenerateOperatorComponent } from './generate-operator/generate-operator.component';
+import { AjaxOperatorComponent } from './ajax-operator/ajax-operator.component';
+import { IifOperatorComponent } from './iif-operator/iif-operator.component';
+import { ConcatOperatorComponent } from './concat-operator/concat-operator.component';
+import { MergeOperatorComponent } from './merge-operator/merge-operator.component';
+import { CombineLatestOperatorComponent } from './combine-latest-operator/combine-latest-operator.component';
 
 
 const routes: Routes = [
@@ -28,8 +34,14 @@ const routes: Routes = [
   { path: 'subject', component: SubjectComponent },
   { path: 'debounce-time', component: DebounceTimeDistinctUntilChangedComponent },
   { path: 'replay-subject', component: ReplaySubjectComponent },
-  { path: 'async-subject', component: AsyncSubjectComponent }
-
+  { path: 'async-subject', component: AsyncSubjectComponent },
+  { path: 'generate-operator', component: GenerateOperatorComponent },
+  { path: 'ajex-operator', component: AjaxOperatorComponent },
+  { path: 'iif-operator', component: IifOperatorComponent },
+  { path: 'concat-operator', component: ConcatOperatorComponent },
+  { path: 'merge-operator', component: MergeOperatorComponent },
+  { path: 'combine-latest-operator', component: CombineLatestOperatorComponent },
+  { path: 'concat-map', component: CombineLatestOperatorComponent }
 
 ];
 

@@ -11,7 +11,18 @@
 //observables//has oprators to reduce //promise// does not have any oprators.
 //observables//lazy execution // promise// not lazy execution.
 
-
+//oprator in rxjs
+// Creation
+// Mathematical
+// Join or Combination
+// Transformation
+// Filtering
+// Utility
+// Conditional
+// Multicasting
+// Error handling
+// Boolean
+// Aggregate
 
 // ------------------------------------------------------------------------------------//
 
@@ -39,3 +50,52 @@
 //search functionly me iska use hota hai.
 //
   //replay-subject - multiple old store value/ "Replays" or emits old values to new subscribers //it store value as per requarment
+
+
+//intrval -//emit value in sequence every 1 second  
+//timer - ye do arrgument leta hai first kab suru ho or kitne sec me chle
+  //tap(observerOrNext, error complete )=> Optional
+  //fromEvent(target, event);
+  //of(args)
+  //from(arrgs  )
+  //pluck(properties)
+  //take(count)
+  //
+
+
+//   Operator tap का उपयोग RxJS में किया जाता है जो एक Observable को मॉडिफाई करने के लिए उपयोग किया जाता है। tap ऑपरेटर देखने के लिए एक RxJS Observable को देखता है लेकिन कुछ नहीं बदलता है, और फिर उसे वापस देता है। tap ऑपरेटर से हम एक Observable को subscribe करने से पहले या subscribe करने के बाद मॉडिफाई कर सकते हैं जैसे कि console.log() कॉल करके वेरिएबल की मूल्य देखना।
+// यह एक डेबगिंग टूल के रूप में उपयोग किया जाता है जो Observable में हो रही घटनाओं की जांच करने के लिए इस्तेमाल किया जाता है। इसका उपयोग किसी भी उपयोगकर्ता अभिनय को परखने के लिए किया जाता है जैसे कि किसी बटन को क्लिक करने पर क्या हो रहा है, कौन सा वैल्यू सेट हुआ है या कौन सी घटनाएं हो रही हैं।
+
+
+
+
+// debounceTime एक RxJS ऑपरेटर है जो टाइमर को रीसेट किए बिना एक Observable से आउटपुट को देर करता है। यह Observable में बड़ी ताकतवर घटनाओं को कम करता है जो काफी तेजी से दौड़ रही होती हैं।
+// जब हम debounceTime को Observable पर लागू करते हैं, तो उसके बाद दी गई मिलीसेकंड में कोई दूसरी घटना आई तो वह इग्नोर हो जाती है और जब यह समय समाप्त होता है, तो लेटेस्ट घटना को आउटपुट के रूप में भेज दिया जाता है।
+// इसका उपयोग उन घटनाओं को दिखाने के लिए किया जाता है जो तेजी से आ रही होती हैं लेकिन उनका इंपैक्ट कम होता है। उदाहरण के लिए, जब हम एक खोज क्वेरी डालते हैं, तो debounceTime उसे एक बार में केवल एक बार भेजता है, जो कि खोज करने से पहले ठीक होने के लिए कुछ समय लेता है।
+
+
+
+
+// Observable और observe दोनों अलग-अलग चीजें होती हैं।
+// Observable एक RxJS क्लास है जो डेटा सीधे और एसिंक्रोनस ढंग से इमिट करता है। Observable एक पाइपलाइन होती है जो डेटा को अन्य RxJS ऑपरेटरों (जैसे map, filter, debounce, etc.) के साथ ट्रांसफॉर्म करती है जो फ़ायदेमंद और सुविधाजनक बनाने में मदद करते हैं।
+// वह एक क्लास होती है जो हमें अपने कस्टम ऑपरेटर भी बनाने की सुविधा देती है।
+// observe दूसरी तरफ, Observable को subscribe करने के लिए एक मेथड होता है। जब हम किसी Observable को subscribe() करते हैं, तो हम एक Observer ऑब्जेक्ट का उपयोग करते हैं जो डेटा इमिट करते हुए उस Observable से लिया जा सकता है।
+// यदि हम एक Observable को subscribe() करते हैं, तो हम उस Observable की मॉडिफाइड वर्जन जो कि एक Subscription होता है को प्राप्त करते हैं। Subscription को अनुशंसित रूप से unsubscribe() करना चाहिए जब हम इसे नहीं इस्तेमाल कर रहे होते हैं ताकि अतिरिक्त रिसोर्सेस का विनाश हो सके।
+// इसलिए, Observable और observe दोनों अलग-अलग होती हैं और एक-दूसरे से भिन्न होती हैं। 
+
+
+
+
+//iif ऑपरेटर रिएक्टिव एक्सजेएस में एक शर्ताधारी ऑपरेटर है जो दो विकल्पों में से एक चुनता है। यह दो विकल्पों की एक एरे बनाता है जो उस स्थिति के अनुसार उत्पन्न होता है जिसमें iif ऑपरेटर का उपयोग किया जाता है। इस ऑपरेटर को इस्तेमाल करने के लिए आपको पहले दो विकल्पों को पास करने होंगे। उसके बाद, आपको एक शर्त देनी होगी जो सत्य होने पर पहले विकल्प को वापस देगी और अगर नहीं तो दूसरे विकल्प को वापस देगी।
+// यह ऑपरेटर निम्नलिखित संदर्भों में उपयोगी हो सकता है:
+// जब आप दो विकल्पों में से एक चुनना चाहते हों।
+// जब आप शर्ताधारी प्रोसेसिंग करना चाहते हों।
+
+
+
+
+
+
+
+
+

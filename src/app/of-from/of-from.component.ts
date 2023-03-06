@@ -65,10 +65,13 @@ export class OfFromComponent implements OnInit {
 // 💡 This operator can also be used to emit a string as a sequence of characters!
     let str1 = "welcome to rxjs topic"
 
-    let obs6 = from(str1).subscribe((value)=>{
+  let obs6 = from(str1)
+    obs6.subscribe((value)=>{
       console.log(value)
     })
     
+
+
       // Observable from
       let array = [1, 2, 3, 4, 5, 6]
       let obs7 = from(array).subscribe((value)=>{
