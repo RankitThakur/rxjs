@@ -27,6 +27,8 @@ import { ConcatOperatorComponent } from './concat-operator/concat-operator.compo
 import { MergeOperatorComponent } from './merge-operator/merge-operator.component';
 import { CombineLatestOperatorComponent } from './combine-latest-operator/combine-latest-operator.component';
 import { ConcatMapOperatorComponent } from './concat-map-operator/concat-map-operator.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
+import { DemoComponent } from './demo/demo.component';
 
 
 @NgModule({
@@ -54,7 +56,9 @@ import { ConcatMapOperatorComponent } from './concat-map-operator/concat-map-ope
     ConcatOperatorComponent,
     MergeOperatorComponent,
     CombineLatestOperatorComponent,
-    ConcatMapOperatorComponent
+    ConcatMapOperatorComponent,
+    MergeMapComponent,
+    DemoComponent
   ],
   imports: [
     BrowserModule,

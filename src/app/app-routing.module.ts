@@ -19,6 +19,9 @@ import { IifOperatorComponent } from './iif-operator/iif-operator.component';
 import { ConcatOperatorComponent } from './concat-operator/concat-operator.component';
 import { MergeOperatorComponent } from './merge-operator/merge-operator.component';
 import { CombineLatestOperatorComponent } from './combine-latest-operator/combine-latest-operator.component';
+import { ConcatMapOperatorComponent } from './concat-map-operator/concat-map-operator.component';
+import { MergeMapComponent } from './merge-map/merge-map.component';
+import { DemoComponent } from './demo/demo.component';
 
 
 const routes: Routes = [
@@ -41,7 +44,11 @@ const routes: Routes = [
   { path: 'concat-operator', component: ConcatOperatorComponent },
   { path: 'merge-operator', component: MergeOperatorComponent },
   { path: 'combine-latest-operator', component: CombineLatestOperatorComponent },
-  { path: 'concat-map', component: CombineLatestOperatorComponent }
+  { path: 'concat-map', component: ConcatMapOperatorComponent },
+  { path: 'merge-map', component: MergeMapComponent },
+  { path: 'demo', component: DemoComponent }
+
+
 
 ];
 

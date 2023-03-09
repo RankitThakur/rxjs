@@ -19,6 +19,13 @@ export class IifOperatorComponent implements OnInit {
  //iif is creator if-else style Observable creation
  //iif oprator => Subscribe to first or second observable based on a condition
 
+
+//  iif<T>(
+//   condition: () => boolean, 
+//   trueResult: SubscribableOrPromise<T>, 
+//   falseResult: SubscribableOrPromise<T>
+// ): Observable<T>
+
  iifOprator = () => {
   // Example 1: simple iif
   let auth: boolean = false;
@@ -29,7 +36,7 @@ export class IifOperatorComponent implements OnInit {
     console.log(res)
    }));
 
-   //Example 2: using set time out 
+   //Example 2: using set time out and with the using fromEvent obserable.
    auth = true;
    fromEvent(this.test.nativeElement, 'click').subscribe(res=> {
     setTimeout(() => {

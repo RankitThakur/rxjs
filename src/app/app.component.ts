@@ -10,11 +10,12 @@ import { CommonServicesService } from './common-services.service';
 })
 export class AppComponent {
   
- subscribe: boolean = false;
+subscribe = false;
+ 
  constructor(private commonService: CommonServicesService) { }
   ngOnInit(){
 
-    this.commonService.subscribe.subscribe(res=>{
+    this.commonService.subject2.subscribe(res=>{
       this.subscribe = res;
     })
     //observable=>>> emits  the data

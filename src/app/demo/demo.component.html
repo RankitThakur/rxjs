@@ -1,0 +1,9 @@
+<p>{{userName}}</p>
+<input type="text"
+ #inputData>
+ <div>
+    <div *ngFor="let data of array" style="display: flex; margin: 10px;">
+        <img [src]="data.avatar_url" style="width: 50px; border-radius: 50%;"/>
+        <h3>{{data.login}}</h3>
+    </div>
+</div>

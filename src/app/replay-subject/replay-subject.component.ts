@@ -25,8 +25,8 @@ export class ReplaySubjectComponent implements OnInit {
   ngOnInit() {
     this.commonService.storeVideo.subscribe(res=>{
       console.log(res)
-      // this.userList1.push(res)
-      this.userList1 = res
+      this.userList1.push(res)
+      // this.userList1 = res
     });
   }
 
@@ -44,8 +44,8 @@ export class ReplaySubjectComponent implements OnInit {
     else {
       this.sub1 =  this.commonService.storeVideo.subscribe(res=>{
         console.log(res)
-          // this.userList2.push(res)
-          this.userList2 = res
+          this.userList2.push(res)
+          // this.userList2 = res
 
         })
     }
